@@ -52,10 +52,6 @@ compile_shader(const engine_shader_info& info)
         DXCall(hr = core::device()->CreateVertexShader(shader_blob->GetBufferPointer(),
             shader_blob->GetBufferSize(), nullptr, (ID3D11VertexShader**)&engine_shaders[shader_id]));
         break;
-    case engine_shader::fill_color_ps:
-        DXCall(hr = core::device()->CreatePixelShader(shader_blob->GetBufferPointer(),
-            shader_blob->GetBufferSize(), nullptr, (ID3D11PixelShader**)&engine_shaders[shader_id]));
-        break;
     case engine_shader::post_process_ps:
         DXCall(hr = core::device()->CreatePixelShader(shader_blob->GetBufferPointer(),
         shader_blob->GetBufferSize(), nullptr, (ID3D11PixelShader**)&engine_shaders[shader_id]));
